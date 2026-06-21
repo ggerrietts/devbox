@@ -1,0 +1,32 @@
+
+[user]
+    name = Geoff Gerrietts
+    email = geoff@gerrietts.net
+    signingkey = /home/agent/.ssh/container-signing-key
+[core]
+    pager = less -FRSX
+    whitespace = space-before-tab,trailing-space,-indent-with-non-tab,-cr-at-eol
+    autocrlf = input
+[branch]
+    autosetupmerge = true
+    autosetuprebase = always
+[push]
+    autosetupremote = true
+    default = upstream
+[rerere]
+    enabled = 1
+[apply]
+    whitespace = fix
+[pack]
+    threads = 4
+[color]
+    ui = auto
+    diff = auto
+    status = auto
+    branch = auto
+[gpg]
+    format = ssh
+[commit]
+    gpgsign = true
+[tag]
+    gpgsign = true
