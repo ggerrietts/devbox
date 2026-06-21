@@ -1,0 +1,43 @@
+{
+  "env": {
+    "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
+    "MAX_THINKING_TOKENS": "128000"
+
+  },
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "skipDangerousModePermissionPrompt": true
+  },
+  "enabledPlugins": {
+    "ask-questions-if-underspecified@trailofbits": true,
+    "security-awareness@skills-curated": true,
+    "superpowers@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "anthropic-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/skills"
+      },
+      "autoUpdate": true
+    },
+    "trailofbits": {
+      "source": {
+        "source": "github",
+        "repo": "trailofbits/skills"
+      },
+      "autoUpdate": true
+    },
+    "skills-curated": {
+      "source": {
+        "source": "github",
+        "repo": "trailofbits/skills-curated"
+      },
+      "autoUpdate": true
+    }
+  }
+}
