@@ -1,5 +1,5 @@
 _DEVBOX_DIR="${${(%):-%x}:A:h}"
-_DEVBOX_IMAGE="gerrietts.net/devbox-template:v1.0"
+_DEVBOX_IMAGE="devbox-template:v1.0"
 _DEVBOX_TEMPLATE="${_DEVBOX_DIR}/target/devbox-template.tar"
 
 function _devbox_rebuild() {
@@ -26,13 +26,13 @@ function _devbox_update() {
 function _devbox_remove() {
   if [[ "$1" == "all" ]]; then
     sbx ls 2>/dev/null | tail -n +2 | awk '{print $1}' | while read -r name; do
-      sbx rm "$name"
+      sbx rm --force "$name"
     done
   elif [[ -n "$1" ]]; then
-    sbx rm "$1"
+    sbx rm --force "$1"
   else
     local sandbox_name="claude-$(basename $(pwd))"
-    sbx rm "$sandbox_name"
+    sbx rm --force "$sandbox_name"
   fi
 }
 
